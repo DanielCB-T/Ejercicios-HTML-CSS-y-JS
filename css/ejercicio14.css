@@ -1,0 +1,69 @@
+body {
+    background-color: #f5f5f5;
+    color: aliceblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.texto {
+    font-size: 18px;
+    text-align: center;
+}
+
+.cabeza {
+    background-color: #2a2a2a;
+    padding: 25px;
+    text-align: center;
+    margin: 0px;
+    border-radius: 15px 15px 0 0;
+}
+
+.contenedor{
+    margin: 70px 250px 70px 250px;
+    background-color: #3d3d3d;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(177, 0, 0);
+}
+
+.contenido {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.botonCont {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; 
+}
+
+textarea {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+input {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+button {
+    background-color: #5b5b5b;
+    font-size: 18px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+button:hover {
+    background-color: #2b2b2b;
+}
+

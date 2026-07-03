@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content ="width=device-with, initial-scale=1.0">
+        <title>Numeros</title>
+        <link rel="stylesheet" href="css/ejercicio14.css">
+        <script src="js/ejercicio14.js"></script>
+    </head>
+    <body>
+        
+        <div class="contenedor">
+            <div class="cabeza">
+                <h1>Menor, mayor y promedio</h1>
+                <h2>Programa que identifica el numero mayor, el menor y el promedio de un conjunto de numeros</h2>
+            </div>
+            
+            <p class="texto">Ingrese tres numeros separados por una coma.</p>
+            <div class="contenido">
+                <input type="text" id="numStack" required placeholder="Ej: 10, 20, 30">
+            </div>
+            <div class="contenido">
+                    <textarea id="numMenor" readonly placeholder="Numero menor"></textarea>
+            </div>
+
+            <div class="contenido">
+                    <textarea id="numMayor" readonly placeholder="Numero mayor"></textarea>
+            </div>
+
+            <div class="contenido">
+                    <textarea id="promedio" readonly placeholder="Promedio"></textarea>
+            </div>
+
+            <div class="botonCont">
+                <button onclick="iniciar()">Verificar</button>
+            </div>
+                        
+        </div>
+    </body>
+</html> 
