@@ -14,7 +14,7 @@ h1{
 }
 
 .cabeza {
-    background-color: #245932;
+    background-color: #2a2a2a;
     padding: 25px;
     text-align: center;
     margin: 0px;
@@ -23,29 +23,24 @@ h1{
 
 .contenedor{
     margin: 120px 250px 120px 250px;
-    background-color: rgb(106, 190, 119);
+    background-color: #3d3d3d;
     border-radius: 15px;
 }
 
 .contenido {
+    margin-top: 15px;
     display: flex;
     justify-content: center;
 }
 
-#km {
+#edad {
     font-size: 20px;
     text-align: center;
 }
 
-#milla {
+#decision {
     font-size: 20px;
     text-align: center;
-}
-
-.igual {
-    font-size: 30px;
-    text-align: center;
-    margin: 0 20px 0 20px;
 }
 
 .botonCont {
@@ -55,7 +50,7 @@ h1{
 }
 
 button {
-    background-color: #245932;
+    background-color: #5b5b5b;
     font-size: 18px;
     color: white;
     border: none;
@@ -66,6 +61,6 @@ button {
 }
 
 button:hover {
-    background-color: #1a401d;
+    background-color: #2b2b2b;
 }
 
