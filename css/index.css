@@ -1,21 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: #ff873c;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f3f4f6; 
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 900px; 
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 h1 {
-    font-size: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
     text-align: center;
+    color: #111827;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    position: relative;
 }
 
-p {
-    font-size: 18px;
-    text-align: center;
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #4f46e5;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
 }
 
-div {
-    background-color: rgb(249, 251, 245);
-    margin: 120px 300px;
-    border-radius: 10px;
-    padding: 20px;
+.grid-ejercicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px; 
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 15px;
+    background-color: #f8fafc;
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.card:hover {
+    background-color: #4f46e5;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+}
+
+.card:active {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 440px) {
+    .main-container {
+        padding: 20px 15px;
+    }
+    
+    .grid-ejercicios {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+    }
 }

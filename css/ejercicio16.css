@@ -1,0 +1,60 @@
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 500px; /* Ampliado un poco para que respire en desktop */
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  h1 {
+    /* 2. Tipografía fluida: se adapta al ancho de la pantalla (mínimo 1.3rem, máximo 1.8rem) */
+    font-size: clamp(1.3rem, 5vw, 1.8rem); 
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  /* 3. Uso de Flexbox para organizar los botones dinámicamente */
+  .botones {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que pasen a la siguiente línea si no caben */
+    gap: 10px; /* Controla el espacio entre botones de forma más limpia que los márgenes */
+  }
+
+  button {
+    flex: 1 1 auto; /* Permite que los botones crezcan para llenar el espacio disponible */
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin: 0; /* Eliminamos el margin porque ahora usamos 'gap' en el contenedor */
+    cursor: pointer;
+  }
+
+  /* 4. Media Query para pantallas muy pequeñas (teléfonos en vertical) */
+  @media (max-width: 480px) {
+    body {
+      margin: 20px auto; /* Reducimos el margen superior e inferior en móviles */
+    }
+
+    .botones {
+      flex-direction: column; /* Apila los botones uno sobre otro para que sean fáciles de tocar */
+    }
+
+    button {
+      width: 100%; /* Botones de ancho completo en pantallas muy pequeñas */
+    }
+  }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Números - Funciones Flecha</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.all.min.js"></script>
+<link rel="stylesheet" href="css/ejercicio16.css">
+</head>
+<body>
+
+<h1>Calculadora de Números</h1>
+
+<label for="numero1">Número 1:</label>
+<input type="text" id="numero1">
+
+<label for="numero2">Número 2:</label>
+<input type="text" id="numero2">
+
+<div class="botones">
+  <button onclick="calcularOperacion('suma')">Sumar</button>
+  <button onclick="calcularOperacion('resta')">Restar</button>
+  <button onclick="calcularOperacion('multiplicacion')">Multiplicar</button>
+  <button onclick="calcularOperacion('division')">Dividir</button>
+</div>
+
+<label for="resultado">Resultado:</label>
+<input type="text" id="resultado" readonly>
+
+<script>
+  // Funciones flecha para las operaciones
+  const sumar = (a, b) => a + b;
+  const restar = (a, b) => a - b;
+  const multiplicar = (a, b) => a * b;
+  const dividir = (a, b) => b !== 0 ? a / b : 'Error: División por cero';
+
+  // Función flecha para validar que un valor sea numérico
+  const esNumeroValido = valor => valor.trim() !== '' && !isNaN(valor);
+
+  // Función principal
+  const calcularOperacion = (operacion) => {
+    const valor1 = document.getElementById('numero1').value;
+    const valor2 = document.getElementById('numero2').value;
+    const resultadoInput = document.getElementById('resultado');
+
+    if (!esNumeroValido(valor1) || !esNumeroValido(valor2)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Datos inválidos',
+        text: 'Por favor ingresa dos números válidos en los campos correspondientes.'
+      });
+      resultadoInput.value = '';
+      return;
+    }
+
+    const numero1 = parseFloat(valor1);
+    const numero2 = parseFloat(valor2);
+    let resultado;
+
+    switch (operacion) {
+      case 'suma':
+        resultado = sumar(numero1, numero2);
+        break;
+      case 'resta':
+        resultado = restar(numero1, numero2);
+        break;
+      case 'multiplicacion':
+        resultado = multiplicar(numero1, numero2);
+        break;
+      case 'division':
+        resultado = dividir(numero1, numero2);
+        break;
+      default:
+        resultado = 'Operación no reconocida';
+    }
+
+    if (resultado === 'Error: División por cero') {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error matemático',
+        text: 'No es posible dividir por cero.'
+      });
+      resultadoInput.value = '';
+      return;
+    }
+
+    resultadoInput.value = resultado;
+  };
+</script>
+
+</body>
+</html>
